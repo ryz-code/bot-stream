@@ -21,7 +21,7 @@ def main() -> None:
     web.run_app(
         app,
         host=app_settings['host'],
-        port=Var.PORT or app_settings['port'],
+        port=int(Var.PORT) if Var.PORT else app_settings['port'],
     )
 
 
