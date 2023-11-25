@@ -106,3 +106,4 @@ venv.bak/
 test.py
 /test
 streambot.log.*
+*.session*

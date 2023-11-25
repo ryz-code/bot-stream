@@ -1,6 +1,8 @@
 
 from aiohttp import web
 
+from WebServer.utils.vars import Var
+
 from .app import init_app
 
 
@@ -19,7 +21,7 @@ def main() -> None:
     web.run_app(
         app,
         host=app_settings['host'],
-        port=app_settings['port'],
+        port=Var.PORT or app_settings['port'],
     )
 
 
