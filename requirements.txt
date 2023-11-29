@@ -5,3 +5,4 @@ markdown2
 python-dotenv
 motor
 dnspython
+Gunicorn

@@ -14,12 +14,14 @@ from WebServer.utils.human_readable import humanbytes
 db=Database(Var.DATABASE_URL, Var.SESSION_NAME)
 
 # @aiohttp_jinja2.template('index.html')
-async def index(request: web.Request) -> Dict[str, str]:
+async def index(request: web.Request):
     return web.HTTPFound("https://t.me/DirectLinkGenerator_Bot")
     # with open(PROJECT_DIR / 'README.md') as f:
     #     text = markdown2.markdown(f.read())
 
     # return {"text": text}
+async def status(request: web.Request):
+    return web.HTTPOk()
 
 @aiohttp_jinja2.template('dl.html')
 async def FileHandler(request: web.Request):
